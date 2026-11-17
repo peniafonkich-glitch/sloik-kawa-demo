@@ -254,6 +254,26 @@ $('copy').addEventListener('click',function(){var m=$('msg'),s=txt();
 calc();
 })();
 </script>
+<style id="rv-css">
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+<script id="rv-js">
+/* pojawianie się bloków przy przewijaniu; bez JS lub przy ograniczonym ruchu wszystko jest od razu widoczne */
+(function(){
+ if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+ var grids='.tiles,.tri,.arches,.menu,.shelves,.rows,.cards,.shops,.nums .row,.split,.facts,.pick';
+ var gridEls=Array.prototype.slice.call(document.querySelectorAll(grids));
+ var targets=[];
+ function add(el,d){if(!el||el.classList.contains('rv')||el.closest('.hero,.intro,.poster,.sky,header,.bar,.sheet'))return;el.classList.add('rv');el.style.setProperty('--d',Math.min(d,.6)+'s');targets.push(el)}
+ document.querySelectorAll('main .wrap > *, footer .wrap > *').forEach(function(el){
+  if(gridEls.indexOf(el)>-1){Array.prototype.forEach.call(el.children,function(c,i){add(c,i*.08)})}else add(el,0)});
+ gridEls.forEach(function(g){if(g.closest('.wrap')&&g.parentElement.classList.contains('wrap'))return;Array.prototype.forEach.call(g.children,function(c,i){add(c,i*.08)})});
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+ targets.forEach(function(t){io.observe(t)});
+})();
+</script>
 <script data-goatcounter="https://penia-demo.goatcounter.com/count" data-goatcounter-settings='{"path":"sloik-kawa"}' async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
