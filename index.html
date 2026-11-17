@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>słoik &amp; kawa | kawiarnia, bistro i cocktail bar, Dmowskiego 4 w Tychach</title>
+<meta name="description" content="Makieta strony słoik &amp; kawa z Tychów: kawiarnia, bistro i cocktail bar przy ul. Dmowskiego 4.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+/* Kierunek: etykieta na słoiku. Błękit i czerwony znak & z logo, trzy panele EAT / DRINK / MEET, zapytanie jako bilet. */
+:root{
+  --blue:#1d86b8;
+  --blue-2:#166f9a;
+  --navy:#0b2b3b;
+  --red:#e2382e;
+  --cream:#f7f0e4;
+  --paper:#fffaf1;
+  --ink:#10222c;
+  --mute:#4f6571;
+  --line:#d9ccb6;
+  --gut:clamp(20px,5vw,64px);
+  --f:'Rubik','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--cream)}
+body{font-family:var(--f);font-size:17px;line-height:1.6;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-weight:800;line-height:.98;letter-spacing:-.025em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--gut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:14px;background:var(--red);color:#fff;font:700 16px var(--f);text-decoration:none;border:2px solid var(--red);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.w{background:#fff;color:var(--navy);border-color:#fff}
+.btn.out{background:transparent;color:inherit;border-color:currentColor}
+
+header{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px var(--gut);color:#fff;transition:background .2s,color .2s}
+header.solid{background:var(--cream);color:var(--ink);border-bottom:1px solid var(--line)}
+.brand{font:800 22px var(--f);letter-spacing:-.03em;text-decoration:none}
+.brand i{font-style:normal;color:var(--red)}
+header nav{display:flex;gap:26px;font:500 15px var(--f)}
+header nav a{text-decoration:none}
+header nav a:hover{text-decoration:underline}
+@media(max-width:560px){header nav .opt{display:none}}
+
+/* scena */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--blue);color:#fff;overflow:hidden}
+.amp{position:absolute;right:-4vw;top:50%;transform:translateY(-52%);font:800 clamp(380px,62vw,980px)/.7 var(--f);color:var(--red);opacity:.92;user-select:none;pointer-events:none}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:2}
+.lines{position:absolute;left:var(--gut);top:50%;transform:translateY(-62%);z-index:3;width:min(54vw,720px);height:clamp(230px,40vh,400px)}
+.l{position:absolute;left:0;top:0;width:100%;opacity:0;animation:show 12s infinite both}
+.l2{animation-delay:4s}.l3{animation-delay:8s}
+@keyframes show{0%{opacity:0;transform:translateY(40px)}5%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-40px)}}
+.l h1,.l h2{font-size:clamp(54px,9.6vw,150px)}
+.l p{margin-top:18px;max-width:30ch;font-size:clamp(17px,1.6vw,22px);color:#e4f4fb}
+.cta{position:absolute;left:var(--gut);bottom:clamp(36px,9vh,80px);z-index:4;display:flex;gap:12px;flex-wrap:wrap}
+.tagl{position:absolute;right:var(--gut);bottom:clamp(36px,9vh,80px);z-index:4;font:700 14px var(--f);letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;color:#fff}
+@media(max-width:820px){
+  .lines{width:calc(100% - 2*var(--gut));top:15%;transform:none;height:200px}
+  .l h1,.l h2{font-size:clamp(46px,15vw,92px)}
+  .amp{font-size:110vw;right:-18vw;top:54%}
+  .tagl{display:none}
+}
+
+/* trzy panele */
+.sec{padding:clamp(64px,10vh,120px) 0}
+.sec h2{font-size:clamp(44px,7vw,100px)}
+.lead{margin-top:14px;max-width:52ch;color:var(--mute)}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,26px);margin-top:clamp(30px,5vh,52px)}
+.pan{position:relative;border-radius:22px;overflow:hidden;background:var(--navy);color:#fff;min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,2.4vw,32px);transition:transform .25s}
+.pan:hover{transform:translateY(-6px) rotate(-.6deg)}
+.pan:nth-child(2){background:var(--blue-2)}
+.pan:nth-child(3){background:var(--red)}
+.pan .ph{position:absolute;inset:0}
+.pan .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.pan .ph span{position:absolute;left:20px;right:20px;top:20px;font-size:13px;opacity:.7}
+.pan .big{position:absolute;right:14px;top:6px;font:800 clamp(90px,10vw,150px)/1 var(--f);opacity:.16;letter-spacing:-.05em;pointer-events:none}
+.pan h3{position:relative;font-size:clamp(46px,5vw,72px)}
+.pan p{position:relative;margin-top:10px;max-width:28ch;color:#e7f3f9}
+@media(max-width:900px){.tri{grid-template-columns:1fr}.pan{min-height:340px}}
+
+/* bilet */
+.ticket{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);margin-top:clamp(30px,5vh,52px);background:var(--paper);border:2px solid var(--ink);border-radius:22px;overflow:hidden}
+.ticket .l1c{padding:clamp(22px,3vw,40px)}
+.ticket .r1c{background:var(--navy);color:#fff;padding:clamp(22px,3vw,40px);position:relative;border-left:3px dashed var(--cream)}
+@media(max-width:900px){.ticket{grid-template-columns:1fr}.ticket .r1c{border-left:0;border-top:3px dashed var(--cream)}}
+fieldset{border:0;margin-bottom:22px}
+legend,label.t{display:block;font:700 13px var(--f);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;padding:0;color:var(--blue-2)}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label{margin:0;padding:10px 18px;min-height:48px;display:inline-flex;align-items:center;border:2px solid var(--ink);border-radius:14px;cursor:pointer;font:500 16px var(--f);background:#fff;color:var(--ink)}
+.seg input:checked+label{background:var(--ink);color:#fff}
+.seg input:focus-visible+label{outline:3px solid var(--red);outline-offset:2px}
+.seg.m input:checked+label{background:var(--blue);border-color:var(--blue)}
+input[type=text]{width:100%;min-height:52px;padding:0 16px;font:16px var(--f);color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:14px}
+input[type=text]:focus{outline:3px solid var(--red);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.r1c h3{font-size:34px;margin-bottom:14px}
+.r1c pre{white-space:pre-wrap;font:400 17px/1.65 var(--f);min-height:200px}
+.r1c pre.h2{color:#a9c2cf}
+.acts{display:grid;gap:10px;margin-top:20px}
+.msg{min-height:22px;margin-top:10px;font-size:14px;color:#cfe3ee}
+
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);margin-top:clamp(28px,5vh,48px)}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+dl{display:grid;grid-template-columns:auto 1fr;gap:12px 26px}
+dt{font:700 13px var(--f);letter-spacing:.12em;text-transform:uppercase;color:var(--blue-2);padding-top:6px}
+dd{font-size:20px}
+.map{border-radius:22px;overflow:hidden;min-height:400px;background:#e5dcc9;border:2px solid var(--ink)}
+.map iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+footer{padding:36px 0 56px;border-top:1px solid var(--line)}
+footer p{max-width:80ch;font-size:14px;color:var(--mute)}
+@media(prefers-reduced-motion:reduce){.l{animation:none;opacity:0}.l1{opacity:1}*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <a class="brand" href="#start">słoik <i>&amp;</i> kawa</a>
+  <nav aria-label="Menu"><a class="opt" href="#oferta">Co mamy</a><a href="#zapytanie">Zapytaj</a><a class="opt" href="#kontakt">Kontakt</a></nav>
+</header>
+
+<main>
+<section class="hero" id="start">
+  <div class="amp" aria-hidden="true">&amp;</div>
+  <canvas id="cv" role="img" aria-label="Trójwymiarowy słoik z mrożoną kawą. Model wygenerowany komputerowo, nie zdjęcie z lokalu."></canvas>
+  <div class="lines">
+    <div class="l l1"><h1>Kawiarnia.</h1><p>Dmowskiego 4 w Tychach. Na miejscu i na wynos.</p></div>
+    <div class="l l2"><h2>Bistro.</h2><p>Ciasta i dania w samym środku miasta.</p></div>
+    <div class="l l3"><h2>Cocktail bar.</h2><p>Kawa rano, drink wieczorem.</p></div>
+  </div>
+  <div class="cta"><a class="btn w" href="#zapytanie">Zapytaj o stolik lub odbiór</a><a class="btn out" href="#oferta">Co mamy</a></div>
+  <div class="tagl" aria-hidden="true">eat / drink / meet</div>
+</section>
+
+<section class="sec" id="oferta">
+  <div class="wrap">
+    <h2>Eat, drink, meet</h2>
+    <p class="lead">Tak o sobie piszą: kawiarnia, bistro i cocktail bar. Aktualne menu i ceny podaje lokal.</p>
+    <div class="tri">
+      <article class="pan"><div class="ph"><span>Tu pojawi się zdjęcie z Waszego lokalu</span><img alt="Jedzenie, słoik &amp; kawa" src="photos/eat.jpg" loading="lazy" onerror="this.remove()"></div><div class="big" aria-hidden="true">eat</div><h3>Eat</h3><p>Bistro i domowe ciasta, na przykład tarta Lotus z ciasteczkami Biscoff.</p></article>
+      <article class="pan"><div class="ph"><span>Tu pojawi się zdjęcie z Waszego lokalu</span><img alt="Napoje, słoik &amp; kawa" src="photos/drink.jpg" loading="lazy" onerror="this.remove()"></div><div class="big" aria-hidden="true">drink</div><h3>Drink</h3><p>Kawa przez cały dzień i cocktail bar na wieczór.</p></article>
+      <article class="pan"><div class="ph"><span>Tu pojawi się zdjęcie z Waszego lokalu</span><img alt="Wnętrze, słoik &amp; kawa" src="photos/meet.jpg" loading="lazy" onerror="this.remove()"></div><div class="big" aria-hidden="true">meet</div><h3>Meet</h3><p>Miejsce na spotkanie we dwoje albo w grupie, w samym centrum Tychów.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="zapytanie" style="padding-top:0">
+  <div class="wrap">
+    <h2>Zapytaj o stolik lub odbiór</h2>
+    <p class="lead">Wybierz, o co pytasz. Po prawej powstaje gotowa wiadomość. Wyślesz ją mailem, napiszesz na Instagramie albo zadzwonisz.</p>
+    <div class="ticket">
+      <div class="l1c">
+        <fieldset><legend>Czego dotyczy</legend><div class="seg m" id="mode"></div></fieldset>
+        <fieldset><legend>Co Cię interesuje</legend><div class="seg" id="what"></div></fieldset>
+        <fieldset><legend>Kiedy</legend><div class="seg" id="day"></div></fieldset>
+        <div class="two">
+          <div><label class="t" for="pp">Dla ilu osób</label><input type="text" id="pp" inputmode="numeric" placeholder="np. 4" autocomplete="off"></div>
+          <div><label class="t" for="nm">Twoje imię</label><input type="text" id="nm" autocomplete="given-name"></div>
+        </div>
+        <div style="margin-top:16px"><label class="t" for="nt">Uwagi</label><input type="text" id="nt" placeholder="np. przy oknie" autocomplete="off"></div>
+      </div>
+      <aside class="r1c" aria-live="polite">
+        <h3>Twoja wiadomość</h3>
+        <pre id="pre"></pre>
+        <div class="acts">
+          <a class="btn w" id="mail" href="#">Wyślij e-mailem</a>
+          <a class="btn out" href="tel:+48511313512">Zadzwoń: 511 313 512</a>
+          <a class="btn out" href="https://www.instagram.com/sloikikawa/" target="_blank" rel="noopener">Napisz na Instagramie</a>
+          <button type="button" class="btn out" id="copy">Kopiuj wiadomość</button>
+        </div>
+        <div class="msg" id="msg" role="status"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kontakt" style="padding-top:0">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="contact">
+      <dl>
+        <dt>Adres</dt><dd>ul. Dmowskiego 4<br>43-100 Tychy</dd>
+        <dt>Telefon</dt><dd><a href="tel:+48511313512">511 313 512</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:sloikikawa@gmail.com">sloikikawa@gmail.com</a></dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/sloikikawa/" rel="noopener">słoik &amp; kawa</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/sloikikawa/" rel="noopener">@sloikikawa</a></dd>
+        <dt>Na miejscu</dt><dd>Kawiarnia, bistro i cocktail bar, odbiór na wynos</dd>
+      </dl>
+      <div class="map"><iframe title="Mapa: słoik &amp; kawa, Dmowskiego 4, Tychy" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=18.9780%2C50.1090%2C18.9930%2C50.1160&amp;layer=mapnik&amp;marker=50.1126133%2C18.9855831"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>To makieta nowej strony. Nie ma na niej zdjęć lokalu: słoik z kawą na ekranie to model 3D wygenerowany komputerowo. W pełnej wersji pojawią się prawdziwe zdjęcia, menu z cenami i godziny otwarcia, za zgodą właścicieli. Teksty, adres i dane kontaktowe pochodzą z facebookowej strony słoik &amp; kawa.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var hd=$('hd');
+var still=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);var t=id&&$(id);if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-(id==='start'?0:56),behavior:still?'auto':'smooth'})}});
+addEventListener('scroll',function(){hd.classList.toggle('solid',scrollY>40)},{passive:true});
+
+/* 3D: lekki słoik, obraca się sam */
+var cv=$('cv'),ok=false,model=null,pivot,R,S,cam,ry=-.5;
+try{var tc=document.createElement('canvas');ok=!!(window.WebGLRenderingContext&&(tc.getContext('webgl')||tc.getContext('experimental-webgl')))&&window.THREE&&THREE.GLTFLoader}catch(e){}
+if(ok){
+ R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio||1,2));R.outputEncoding=THREE.sRGBEncoding;
+ S=new THREE.Scene();cam=new THREE.PerspectiveCamera(30,1,.1,100);cam.position.set(0,0,8);
+ S.add(new THREE.AmbientLight(0xffffff,.8));
+ var k=new THREE.DirectionalLight(0xffffff,1.4);k.position.set(-3,5,5);S.add(k);
+ var r=new THREE.DirectionalLight(0xbfe6f5,.9);r.position.set(4,2,-4);S.add(r);
+ pivot=new THREE.Group();S.add(pivot);
+ new THREE.GLTFLoader().load('jar.glb',function(g){var m=g.scene,b=new THREE.Box3().setFromObject(m),sz=b.getSize(new THREE.Vector3()),ct=b.getCenter(new THREE.Vector3());var s=3.2/Math.max(sz.x,sz.y,sz.z);m.scale.setScalar(s);m.position.set(-ct.x*s,-ct.y*s,-ct.z*s);model=m;pivot.add(m);draw()});
+}
+function fit(){if(!ok)return;var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;R.setSize(w,h,false);cam.aspect=w/h;cam.position.z=w/h<.8?10.5:8.4;cam.updateProjectionMatrix();draw()}
+if(ok){if(window.ResizeObserver)new ResizeObserver(fit).observe(cv);else addEventListener('resize',fit)}
+var vis=true;if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe($('start'));
+var sy=0;addEventListener('scroll',function(){sy=Math.min(1,scrollY/innerHeight)},{passive:true});
+function draw(){if(!model)return;var w=cv.clientWidth/cv.clientHeight,mob=w<.8;
+ pivot.rotation.y=ry;pivot.rotation.x=.12;pivot.scale.setScalar((mob?.62:1)*(1+sy*.12));
+ pivot.position.x=mob?0:(w>1.9?2.6:(w>1.3?2.0:1.5));pivot.position.y=(mob?.15:0)-sy*.4;
+ R.render(S,cam)}
+var last=performance.now();
+(function loop(now){requestAnimationFrame(loop);var dt=Math.min(.05,(now-last)/1000);last=now;if(!still)ry+=dt*.5;if(vis)draw()})(last);
+
+/* zapytanie w formie biletu */
+var modes=['Odbiór na wynos','Stolik'],whats=['Kawa','Ciasto','Bistro','Drink z baru'],days=['dziś','jutro','w weekend','w innym terminie'];
+function seg(id,arr,name,type,first){var el=$(id);arr.forEach(function(t,i){var x=name+i;el.insertAdjacentHTML('beforeend','<input type="'+type+'" name="'+name+'" id="'+x+'" value="'+t+'"'+(first&&i===0?' checked':'')+'><label for="'+x+'">'+t+'</label>')})}
+seg('mode',modes,'md','radio',true);seg('what',whats,'wh','checkbox',false);seg('day',days,'dy','radio',true);
+function val(n){var c=document.querySelector('input[name='+n+']:checked');return c?c.value:''}
+function checked(n){return Array.prototype.map.call(document.querySelectorAll('input[name='+n+']:checked'),function(x){return x.value})}
+function txt(){var md=val('md'),L=['Dzień dobry,',''];
+ if(md===modes[0]){L.push('proszę o przygotowanie na odbiór:');var w=checked('wh');if(w.length)w.forEach(function(x){L.push('• '+x)});else L.push('• (wybierz powyżej, co Cię interesuje)')}
+ else{L.push('chcę zapytać o stolik.');var w2=checked('wh');if(w2.length)L.push('Interesuje nas: '+w2.join(', ').toLowerCase()+'.');var pp=$('pp').value.trim();if(pp)L.push('Liczba osób: '+pp)}
+ L.push('','Kiedy: '+val('dy'));var nt=$('nt').value.trim();if(nt)L.push('Uwagi: '+nt);var nm=$('nm').value.trim();L.push('','Proszę o potwierdzenie.','','Pozdrawiam'+(nm?', '+nm:''));
+ return L.join('\n')}
+function calc(){var s=txt();$('pre').textContent=s;
+ $('mail').href='mailto:sloikikawa@gmail.com?subject='+encodeURIComponent(val('md'))+'&body='+encodeURIComponent(s)}
+['mode','what','day'].forEach(function(i){$(i).addEventListener('change',calc)});['pp','nm','nt'].forEach(function(i){$(i).addEventListener('input',calc)});
+$('copy').addEventListener('click',function(){var m=$('msg'),s=txt();
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){m.textContent='Skopiowano. Wklej w wiadomość na Instagramie lub Facebooku.'},function(){m.textContent='Nie udało się skopiować. Zaznacz tekst ręcznie.'})}else{m.textContent='Nie udało się skopiować. Zaznacz tekst ręcznie.'}});
+calc();
+})();
+</script>
+<script data-goatcounter="https://penia-demo.goatcounter.com/count" data-goatcounter-settings='{"path":"sloik-kawa"}' async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
